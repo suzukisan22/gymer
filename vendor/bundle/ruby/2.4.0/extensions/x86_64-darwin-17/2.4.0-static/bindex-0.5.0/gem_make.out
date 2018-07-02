@@ -1,0 +1,15 @@
+current directory: /Users/suzukiryouta/Documents/workplace/rails/gymer/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+/Users/suzukiryouta/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20180702-17904-1b4b9de.rb extconf.rb
+creating Makefile
+
+current directory: /Users/suzukiryouta/Documents/workplace/rails/gymer/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/suzukiryouta/Documents/workplace/rails/gymer/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/suzukiryouta/Documents/workplace/rails/gymer/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20180702-17904-1f7y61z/bindex
