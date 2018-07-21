@@ -68,3 +68,5 @@ gem 'slim-rails'
 gem 'devise'
 
 gem 'webpacker', github: 'rails/webpacker'
+gem 'jquery-rails' 
+gem 'jquery-ui-rails'
