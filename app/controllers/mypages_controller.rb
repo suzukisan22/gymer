@@ -1,5 +1,7 @@
 class MypagesController < ApplicationController
   before_action :set_mypage, only: [:show]
+  layout "mypage"
+  
   def show
   end
 
