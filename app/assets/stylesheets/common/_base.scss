@@ -51,7 +51,7 @@ $break-pointSP-down: 750px;
 }
 
 .tablet-only{
-  @include media-tablet-down {
+  @include media-sp-down {
     display: none;
   }
 }
