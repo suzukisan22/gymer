@@ -1,0 +1,63 @@
+
+$break-pointPC-up: 1200px;
+$break-pointPC-down: 1119px;
+$break-pointTablet-up: 971px;
+$break-pointTablet-down: 970px;
+$break-pointSP-up: 751px;
+$break-pointSP-down: 750px;
+
+//あるpx以上の場合に適用する
+@mixin media-pc-up {
+  @media screen and (min-width:$break-pointPC-up) {
+    @content;
+  }
+}
+
+@mixin media-tablet-up {
+  @media screen and (min-width:$break-pointTablet-up) {
+    @content;
+  }
+}
+
+@mixin media-sp-up {
+  @media screen and (min-width:$break-pointSP-up) {
+    @content;
+  }
+}
+
+// あるpx以下の場合に適用する
+@mixin media-pc-down {
+  @media screen  {
+    @content;
+  }
+}
+
+@mixin media-tablet-down {
+  @media screen and (max-width:$break-pointTablet-down) {
+    @content;
+  }
+}
+
+@mixin media-sp-down {
+  @media screen and (max-width:$break-pointSP-down) {
+    @content;
+  }
+}
+
+.sp-only{
+  @include media-sp-up {
+    display: none;
+  }
+}
+
+.tablet-only{
+  @include media-tablet-down {
+    display: none;
+  }
+}
+
+.pc-only{
+  @include media-pc-down {
+    display: none;
+  }
+}
