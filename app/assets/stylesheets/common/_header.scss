@@ -1,0 +1,12 @@
+@import "base.scss";
+header {
+  ul.navbar-nav {
+    @include media-tablet-down{
+      display: inline;
+      width: 150px;
+      li {
+        width: 50%;
+      }
+    }
+  }
+}
