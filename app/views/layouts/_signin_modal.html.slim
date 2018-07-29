@@ -1,0 +1,24 @@
+#signInModal.modal.fade aria-hidden="true" aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1" 
+  .modal-dialog role="document" 
+    .modal-content
+      = form_tag session_path(:user), method: :post do |f|
+        .modal-header
+          h5#exampleModalLabel.modal-title Log in
+          button.close aria-label="Close" data-dismiss="modal" type="button" 
+            span aria-hidden="true"
+              | ×
+        .modal-body
+            .form-group
+              label for='user_email'
+                | email
+              br/
+              = email_field_tag 'user[email]', '', autofocus: true, autocomplete: "email", class: "form-control"
+            .form-group
+              label for='user_password'
+                | password
+              br/
+              = password_field_tag 'user[password]', '', autocomplete: "off", class: "form-control"
+        .modal-footer
+          button.btn.btn-secondary data-dismiss="modal" type="button"  Close
+          / button.btn.btn-primary type="button"  Save changes
+          = submit_tag(["ログイン"], class: "btn btn-primary")

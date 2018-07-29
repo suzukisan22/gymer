@@ -11,9 +11,9 @@ header
               = link_to "Sign Out", destroy_user_session_path, class: "nav-link", method: :delete, data: {confirm: "ログアウトしますか?" }
           - else
             li.nav-item.active.float-left
-              = link_to new_user_session_path, class: "nav-link" do
-                | Login
-                span.sr-only (current)
+              span.nav-link.sign_in data-toggle="modal" data-target="#signInModal"
+                | Sign In
+              = render "layouts/signin_modal"
             li.nav-item.float-left
               = link_to new_user_registration_path, class: "nav-link" do
                 | Sign Up
