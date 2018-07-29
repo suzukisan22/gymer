@@ -12,9 +12,12 @@ html
     .container
       .row.tablet-only
         .col-sm-3
-          | 
-            サイドバー
-        .col-md-9
+          .sidenav
+            a href="#" 記録
+            a href="#" About
+            a href="#" About
+            a href="#" About
+        #main-content.col-md-9
           = yield
       .row.sp-only
         .col-xs-10.col-xs-offset-1
