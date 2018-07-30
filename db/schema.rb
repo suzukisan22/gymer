@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2018_07_30_112846) do
     t.decimal "distance", precision: 6, scale: 3
     t.string "time"
     t.integer "place_id"
+    t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["place_id"], name: "index_records_on_place_id"

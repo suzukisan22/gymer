@@ -8,6 +8,7 @@ class CreateRecords < ActiveRecord::Migration[5.2]
       t.decimal :distance, precision: 6, scale: 3
       t.string :time
       t.integer :place_id
+      t.text :comment
 
       t.timestamps
     end
