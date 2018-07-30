@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_30_035441) do
+ActiveRecord::Schema.define(version: 2018_07_30_041915) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,15 +18,22 @@ ActiveRecord::Schema.define(version: 2018_07_30_035441) do
   create_table "records", force: :cascade do |t|
     t.integer "user_id"
     t.integer "training_menu_id"
-    t.integer "times"
+    t.integer "number_of_times"
     t.decimal "weight", precision: 6, scale: 2
     t.decimal "distance", precision: 6, scale: 3
+    t.string "time"
     t.integer "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["place_id"], name: "index_records_on_place_id"
     t.index ["training_menu_id"], name: "index_records_on_training_menu_id"
     t.index ["user_id"], name: "index_records_on_user_id"
+  end
+
+  create_table "training_menus", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

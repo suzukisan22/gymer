@@ -3,9 +3,10 @@ class CreateRecords < ActiveRecord::Migration[5.2]
     create_table :records do |t|
       t.integer :user_id
       t.integer :training_menu_id
-      t.integer :times
+      t.integer :number_of_times
       t.decimal :weight, precision: 6, scale: 2
       t.decimal :distance, precision: 6, scale: 3
+      t.string :time
       t.integer :place_id
 
       t.timestamps
