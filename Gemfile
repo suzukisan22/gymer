@@ -70,3 +70,9 @@ gem 'devise'
 gem 'webpacker', github: 'rails/webpacker'
 gem 'jquery-rails' 
 gem 'jquery-ui-rails'
+
+group :test, :development do
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem "awesome_print"
+end

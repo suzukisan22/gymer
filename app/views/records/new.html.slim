@@ -1,2 +1,26 @@
-h1 Records#new
-p Find me in app/views/records/new.html.slim
+h1 記録作成
+= form_for(@record) do |f|
+  .form-group
+    = f.fields_for :training_menu, TrainingMenu.new do |tf|
+      = tf.label :title
+        | トレーニング名
+      = tf.text_field :title, class: "form-control"
+  .form-group
+    = f.label :number_of_times
+      | 回数
+    = f.number_field :number_of_times, class: "form-control"
+  .form-group
+    = f.label :weight
+      | 重さ
+    = f.number_field :weight, class: "form-control", placeholder: "負荷がない場合は未記入"
+  .form-group
+    = f.label :distance
+      | キョリ
+    = f.number_field :distance, class: "form-control", placeholder: "シンプルな筋トレであれば空白"
+  .form-group
+    = f.fields_for :place, Place.new do |pf|
+      = pf.label :name
+        | トレーニングした場所
+      = pf.text_field :name, class: "form-control"
+  .form-group
+    = f.submit "記録する", class: "btn btn-info btn-block"
